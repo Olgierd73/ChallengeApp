@@ -1,33 +1,30 @@
-﻿//zadanie domowe dzień 4
-string name = "Ewa";
-var age = 33;
-bool isFemale = true;
+﻿int number = 770912734;
+string numberInString = number.ToString();
+char[] letters = numberInString.ToArray();
 
-if (isFemale)
+List<char> typeOfNumbers = new List<char>();
+typeOfNumbers.Add('0');
+typeOfNumbers.Add('1');
+typeOfNumbers.Add('2');
+typeOfNumbers.Add('3');
+typeOfNumbers.Add('4');
+typeOfNumbers.Add('5'); 
+typeOfNumbers.Add('6');
+typeOfNumbers.Add('7');
+typeOfNumbers.Add('8');
+typeOfNumbers.Add('9');
 
+Console.WriteLine(number);
+
+foreach(var cypfer in typeOfNumbers) 
 {
-    if (name == "Ewa" && age == 33)
+    int count = 0;
+     foreach (var s in letters)
     {
-        Console.WriteLine("Ewa,lat 33");
+        if (cypfer == s) count++;          
     }
-    else if (age < 30)
-    {
-        Console.WriteLine("Kobieta poniżej 30");
-    }
-}
-else
-{
-    if (age >= 18)
-    {
-        Console.WriteLine("Mężczyzna pełnoletni");
-    }
-    else 
-    {
-        Console.WriteLine("Mężczyzna niepełnoletni");
-    }
-}
-        
+             Console.WriteLine(cypfer + "=>" + count);
+}   
 
 
-
-
+   
